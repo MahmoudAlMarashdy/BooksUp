@@ -2,7 +2,7 @@ import 'package:books_up/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'features/splash/view/splash_view.dart';
+import 'features/splash/screens/splash_view.dart';
 
 void main() {
   runApp(const BooksUp());
