@@ -13,11 +13,25 @@ class HomeBody extends StatelessWidget {
     return Column(
       children: [
         CustomAppBar(),
-        ListViewItem(),
+        FeaturedBooksList(),
       ],
     );
   }
 }
 
+class FeaturedBooksList extends StatelessWidget {
+  const FeaturedBooksList({super.key});
 
-
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: MediaQuery.of(context).size.height*0.3,
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemBuilder: (context,index){
+          return ListViewItem();
+        },
+      ),
+    );
+  }
+}
