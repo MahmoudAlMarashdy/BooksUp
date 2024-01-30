@@ -1,4 +1,5 @@
 import 'package:books_up/core/utils/assets.dart';
+import 'package:books_up/core/utils/styles.dart';
 import 'package:books_up/features/Home/screens/widgets/featured_book_item.dart';
 import 'package:books_up/features/Home/screens/widgets/featured_books_list.dart';
 import 'package:flutter/material.dart';
@@ -11,11 +12,17 @@ class HomeBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        CustomAppBar(),
-        FeaturedBooksList(),
-      ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 8),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          CustomAppBar(),
+          FeaturedBooksList(),
+          SizedBox(height: 20,),
+          Text("Best Seller",style: Styles.titleMedium,)
+        ],
+      ),
     );
   }
 }
