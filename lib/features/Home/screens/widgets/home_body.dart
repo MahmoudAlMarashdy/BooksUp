@@ -20,7 +20,44 @@ class HomeBody extends StatelessWidget {
           CustomAppBar(),
           FeaturedBooksList(),
           SizedBox(height: 20,),
-          Text("Best Seller",style: Styles.titleMedium,)
+          Text("Best Seller",style: Styles.titleMedium,),
+          SizedBox(height: 20,),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+            child: BestSellerItem(),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class BestSellerItem extends StatelessWidget {
+  const BestSellerItem({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 140,
+      child: Row(
+        children: [
+          AspectRatio(
+            aspectRatio: 2.7/4,
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                image: DecorationImage(
+                    fit: BoxFit.fill,
+                    image: AssetImage(AssetsData.bookImg1)
+                ),
+              ),
+            ),
+          ),
+          Column(
+            children: [
+
+            ],
+          )
         ],
       ),
     );
