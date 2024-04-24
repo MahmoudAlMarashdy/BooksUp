@@ -53,9 +53,13 @@ class BestSellerItem extends StatelessWidget {
               ),
             ),
           ),
+          SizedBox(width: 20,),
           Column(
             children: [
-
+              SizedBox(
+                width: MediaQuery.of(context).size.width*0.5,
+                child: Text("A Million To One")
+              ),
             ],
           )
         ],
