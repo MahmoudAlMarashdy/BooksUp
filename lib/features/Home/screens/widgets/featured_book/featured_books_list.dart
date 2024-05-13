@@ -1,4 +1,4 @@
-import 'package:books_up/features/Home/screens/widgets/featured_book_item.dart';
+import 'package:books_up/features/Home/screens/widgets/featured_book/featured_book_item.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
