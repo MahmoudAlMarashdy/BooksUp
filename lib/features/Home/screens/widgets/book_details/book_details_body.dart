@@ -15,12 +15,35 @@ class BookDetailsBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return CustomScrollView(
+      physics: NeverScrollableScrollPhysics(),
+      slivers: [
+        SliverFillRemaining(
+          hasScrollBody: false,
+          child: Column(
+            children: [
+              BookDetailsAppBar(),
+              BooksDetailsSection(),
+              Expanded(child: SizedBox(height: 50,)),
+              SimilarBooksSection(),
+            ],
+          ),
+        )
+      ],
+    );
+  }
+}
+
+class BooksDetailsSection extends StatelessWidget {
+  const BooksDetailsSection({super.key});
+
+  @override
+  Widget build(BuildContext context) {
 
     var screenWidth = MediaQuery.of(context).size.width;
 
     return Column(
       children: [
-        BookDetailsAppBar(),
         Padding(
           padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.28 , vertical: 10),
           child: BookDetailsImage(),
@@ -31,13 +54,24 @@ class BookDetailsBody extends StatelessWidget {
         BookRating(mainAxisAlignment: MainAxisAlignment.center,),
         SizedBox(height: 20,),
         BookAction(),
-        SizedBox(height: 50,),
+      ],
+    );
+  }
+}
+
+class SimilarBooksSection extends StatelessWidget {
+  const SimilarBooksSection({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
         Align(
-          alignment: Alignment.centerLeft,
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Text("You can also like",style: Styles.titleSmall),
-          )
+            alignment: Alignment.centerLeft,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Text("You can also like",style: Styles.titleSmall),
+            )
         ),
         SizedBox(height: 20,),
         SimilarBooksList(),
