@@ -5,8 +5,10 @@ import 'package:books_up/features/Home/screens/widgets/book_details/book_details
 import 'package:books_up/features/Home/screens/widgets/book_details/book_details_image.dart';
 import 'package:books_up/features/Home/screens/widgets/book_details/book_details_rating.dart';
 import 'package:books_up/features/Home/screens/widgets/featured_book/featured_book_item.dart';
+import 'package:books_up/features/Home/screens/widgets/similar_books/similar_books_list.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class BookDetailsBody extends StatelessWidget {
   const BookDetailsBody({super.key});
@@ -29,43 +31,17 @@ class BookDetailsBody extends StatelessWidget {
         BookRating(mainAxisAlignment: MainAxisAlignment.center,),
         SizedBox(height: 20,),
         BookAction(),
+        SizedBox(height: 50,),
+        Align(
+          alignment: Alignment.centerLeft,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Text("You can also like",style: Styles.titleSmall),
+          )
+        ),
+        SizedBox(height: 20,),
+        SimilarBooksList(),
       ],
-    );
-  }
-}
-
-class BookAction extends StatelessWidget {
-  const BookAction({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-
-    var screenWidth = MediaQuery.of(context).size.width;
-
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.1),
-      child: Row(
-        children: [
-          Expanded(child: BookDetailsButton(
-            backGroundColor: Colors.white,
-            text: "19.99 \$",
-            textColor: Colors.black,
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(10),
-              bottomLeft: Radius.circular(10)
-            ),
-          )),
-          Expanded(child: BookDetailsButton(
-            backGroundColor: Colors.redAccent.shade100,
-            text: "Free Preview",
-            textColor: Colors.white,
-            borderRadius: BorderRadius.only(
-              topRight: Radius.circular(10),
-              bottomRight: Radius.circular(10)
-            ),
-          )),
-        ],
-      ),
     );
   }
 }
