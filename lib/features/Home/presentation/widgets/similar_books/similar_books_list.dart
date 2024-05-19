@@ -1,4 +1,4 @@
-import 'package:books_up/features/Home/screens/widgets/similar_books/similar_books_item.dart';
+import 'package:books_up/features/Home/presentation/widgets/similar_books/similar_books_item.dart';
 import 'package:flutter/material.dart';
 
 class SimilarBooksList extends StatelessWidget {
@@ -11,8 +11,8 @@ class SimilarBooksList extends StatelessWidget {
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemBuilder: (context,index){
-          return Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10),
+          return const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10),
             child: SimilarBooksItem(),
           );
         },

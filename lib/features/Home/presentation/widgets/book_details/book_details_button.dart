@@ -13,7 +13,7 @@ class BookAction extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.1),
       child: Row(
         children: [
-          Expanded(child: BookDetailsButton(
+          const Expanded(child: BookDetailsButton(
             backGroundColor: Colors.white,
             text: "19.99 \$",
             textColor: Colors.black,
@@ -26,7 +26,7 @@ class BookAction extends StatelessWidget {
             backGroundColor: Colors.redAccent.shade100,
             text: "Free Preview",
             textColor: Colors.white,
-            borderRadius: BorderRadius.only(
+            borderRadius: const BorderRadius.only(
                 topRight: Radius.circular(10),
                 bottomRight: Radius.circular(10)
             ),
@@ -55,13 +55,13 @@ class BookDetailsButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: (){},
-      child: Text(text,style: Styles.titleMedium.copyWith(color: textColor),),
       style: TextButton.styleFrom(
         backgroundColor: backGroundColor,
         shape: RoundedRectangleBorder(
           borderRadius: borderRadius ?? BorderRadius.zero
         )
       ),
+      child: Text(text,style: Styles.titleMedium.copyWith(color: textColor),),
     );
   }
 }

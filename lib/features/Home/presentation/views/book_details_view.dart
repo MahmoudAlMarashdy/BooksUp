@@ -1,4 +1,4 @@
-import 'package:books_up/features/Home/screens/widgets/book_details/book_details_body.dart';
+import 'package:books_up/features/Home/presentation/widgets/book_details/book_details_body.dart';
 import 'package:flutter/material.dart';
 
 class BookDetailsView extends StatelessWidget {
@@ -6,7 +6,7 @@ class BookDetailsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: SafeArea(
         child: BookDetailsBody(),
       ),

@@ -1,6 +1,5 @@
-import 'package:books_up/features/Home/screens/widgets/featured_book/featured_book_item.dart';
+import 'package:books_up/features/Home/presentation/widgets/featured_book/featured_book_item.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class FeaturedBooksList extends StatelessWidget {
   const FeaturedBooksList({super.key});
@@ -12,8 +11,8 @@ class FeaturedBooksList extends StatelessWidget {
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemBuilder: (context,index){
-          return Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8),
+          return const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 8),
             child: FeaturedBookItem(),
           );
         },

@@ -1,11 +1,10 @@
 import 'package:books_up/core/utils/styles.dart';
-import 'package:books_up/features/Home/screens/widgets/best_seller/best_seller_item.dart';
-import 'package:books_up/features/Home/screens/widgets/book_details/book_details_appbar.dart';
-import 'package:books_up/features/Home/screens/widgets/book_details/book_details_button.dart';
-import 'package:books_up/features/Home/screens/widgets/book_details/book_details_image.dart';
-import 'package:books_up/features/Home/screens/widgets/book_details/book_details_rating.dart';
-import 'package:books_up/features/Home/screens/widgets/featured_book/featured_book_item.dart';
-import 'package:books_up/features/Home/screens/widgets/similar_books/similar_books_list.dart';
+import 'package:books_up/features/Home/presentation/widgets/book_details/book_details_appbar.dart';
+import 'package:books_up/features/Home/presentation/widgets/book_details/book_details_button.dart';
+import 'package:books_up/features/Home/presentation/widgets/book_details/book_details_image.dart';
+import 'package:books_up/features/Home/presentation/widgets/book_details/book_details_rating.dart';
+import 'package:books_up/features/Home/presentation/widgets/similar_books/similar_books_list.dart';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -15,7 +14,7 @@ class BookDetailsBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomScrollView(
+    return const CustomScrollView(
       physics: NeverScrollableScrollPhysics(),
       slivers: [
         SliverFillRemaining(
@@ -46,14 +45,14 @@ class BooksDetailsSection extends StatelessWidget {
       children: [
         Padding(
           padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.28 , vertical: 10),
-          child: BookDetailsImage(),
+          child: const BookDetailsImage(),
         ),
-        SizedBox(height: 10,),
-        Text("Book's Name",style: Styles.titleLarge),
-        Text("Book's Author",style: Styles.titleMedium),
-        BookRating(mainAxisAlignment: MainAxisAlignment.center,),
-        SizedBox(height: 20,),
-        BookAction(),
+        const SizedBox(height: 10,),
+        const Text("Book's Name",style: Styles.titleLarge),
+        const Text("Book's Author",style: Styles.titleMedium),
+        const BookRating(mainAxisAlignment: MainAxisAlignment.center,),
+        const SizedBox(height: 20,),
+        const BookAction(),
       ],
     );
   }
@@ -64,12 +63,12 @@ class SimilarBooksSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       children: [
         Align(
             alignment: Alignment.centerLeft,
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
+              padding: EdgeInsets.symmetric(horizontal: 20),
               child: Text("You can also like",style: Styles.titleSmall),
             )
         ),
