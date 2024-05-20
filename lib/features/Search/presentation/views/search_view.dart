@@ -1,3 +1,4 @@
+import 'package:books_up/features/Search/presentation/widgets/search_body.dart';
 import 'package:flutter/material.dart';
 
 class SearchView extends StatelessWidget {
@@ -7,8 +8,10 @@ class SearchView extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: SafeArea(
-        child: Column(),
-      ),
+        child: SearchBody(
+
+        ),
+      )
     );
   }
 }
