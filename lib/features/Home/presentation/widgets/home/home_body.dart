@@ -1,5 +1,5 @@
 import 'package:books_up/core/utils/styles.dart';
-import 'package:books_up/features/Home/presentation/widgets/best_seller/best_seller_listview.dart';
+import 'package:books_up/features/Home/presentation/widgets/newest/newest_listview.dart';
 import 'package:books_up/features/Home/presentation/widgets/featured_book/featured_books_list.dart';
 
 import 'package:flutter/cupertino.dart';
@@ -22,13 +22,16 @@ class HomeBody extends StatelessWidget {
               HomeAppBar(),
               FeaturedBooksList(),
               SizedBox(height: 20,),
-              Text("Best Seller",style: Styles.titleMedium,),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 12),
+                child: Text("Newest Books",style: Styles.titleMedium,),
+              ),
               SizedBox(height: 20,),
             ],
           ),
         ),
         SliverToBoxAdapter(
-          child: BestSellerListView(),
+          child: NewestListView(),
         )
       ],
     );
