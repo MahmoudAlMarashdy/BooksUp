@@ -18,15 +18,13 @@ class HomeRemoteDataSourceImpl extends HomeRemoteDataSource{
   @override
   Future<List<BookEntity>> fetchFeaturedBooks() async {
     var data = await apiService.get(endPoint: 'volumes?Filtering=free-ebooks&q=programming');
-    List<BookEntity> featuredBooks = [];
-    return featuredBooks = fetchBooks(data);
+    return fetchBooks(data);
   }
 
   @override
   Future<List<BookEntity>> fetchNewestBooks() async {
     var data = await apiService.get(endPoint: 'volumes?q=programming&Sorting=newest');
-    List<BookEntity> newestBooks = [];
-    return newestBooks = fetchBooks(data);
+    return fetchBooks(data);
   }
 
   List<BookEntity> fetchBooks(Map<String, dynamic> data) {
