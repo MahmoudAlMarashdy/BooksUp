@@ -12,9 +12,8 @@ class SearchResultList extends StatelessWidget {
         physics: const BouncingScrollPhysics(),
         itemCount: 10,
         itemBuilder: (context, index) => const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 10,vertical: 5),
-          child: SearchResultItem(),
-        )
-    );
+              padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+              child: SearchResultItem(),
+            ));
   }
 }

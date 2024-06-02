@@ -17,14 +17,14 @@ class SearchBody extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(15),
           child: Align(
-            alignment: Alignment.centerLeft,
-            child: Text("Search Results",style: Styles.titleMedium,)
-          ),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                "Search Results",
+                style: Styles.titleMedium,
+              )),
         ),
         Expanded(child: SearchResultList()),
       ],
     );
   }
 }
-
-

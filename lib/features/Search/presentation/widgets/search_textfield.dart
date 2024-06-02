@@ -13,7 +13,7 @@ class SearchTextField extends StatelessWidget {
           hintText: 'Search ...',
           suffix: IconButton(
             icon: const Icon(FontAwesomeIcons.magnifyingGlass),
-            onPressed: (){},
+            onPressed: () {},
           ),
         ),
       ),

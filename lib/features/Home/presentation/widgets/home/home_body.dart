@@ -21,12 +21,19 @@ class HomeBody extends StatelessWidget {
             children: [
               HomeAppBar(),
               FeaturedBooksList(),
-              SizedBox(height: 20,),
+              SizedBox(
+                height: 20,
+              ),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 12),
-                child: Text("Newest Books",style: Styles.titleMedium,),
+                child: Text(
+                  "Newest Books",
+                  style: Styles.titleMedium,
+                ),
               ),
-              SizedBox(height: 20,),
+              SizedBox(
+                height: 20,
+              ),
             ],
           ),
         ),

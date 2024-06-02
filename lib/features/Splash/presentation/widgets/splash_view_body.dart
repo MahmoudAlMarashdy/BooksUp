@@ -50,7 +50,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
   void initSlidingAnimation() {
     animationController =
-        AnimationController(vsync: this, duration:  Duration(milliseconds: 500));
+        AnimationController(vsync: this, duration: Duration(milliseconds: 500));
     fadingAnimation =
         Tween<double>(begin: 0, end: 1).animate(animationController);
     animationController.forward();

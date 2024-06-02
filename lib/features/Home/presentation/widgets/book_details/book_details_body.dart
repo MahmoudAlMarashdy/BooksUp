@@ -23,7 +23,10 @@ class BookDetailsBody extends StatelessWidget {
             children: [
               BookDetailsAppBar(),
               BooksDetailsSection(),
-              Expanded(child: SizedBox(height: 50,)),
+              Expanded(
+                  child: SizedBox(
+                height: 50,
+              )),
               SimilarBooksSection(),
             ],
           ),
@@ -38,20 +41,26 @@ class BooksDetailsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     var screenWidth = MediaQuery.of(context).size.width;
 
     return Column(
       children: [
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.28 , vertical: 10),
+          padding: EdgeInsets.symmetric(
+              horizontal: screenWidth * 0.28, vertical: 10),
           child: const BookDetailsImage(),
         ),
-        const SizedBox(height: 10,),
-        const Text("Book's Name",style: Styles.titleLarge),
-        const Text("Book's Author",style: Styles.titleMedium),
-        const BookRating(mainAxisAlignment: MainAxisAlignment.center,),
-        const SizedBox(height: 20,),
+        const SizedBox(
+          height: 10,
+        ),
+        const Text("Book's Name", style: Styles.titleLarge),
+        const Text("Book's Author", style: Styles.titleMedium),
+        const BookRating(
+          mainAxisAlignment: MainAxisAlignment.center,
+        ),
+        const SizedBox(
+          height: 20,
+        ),
         const BookAction(),
       ],
     );
@@ -69,14 +78,13 @@ class SimilarBooksSection extends StatelessWidget {
             alignment: Alignment.centerLeft,
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 20),
-              child: Text("You can also like",style: Styles.titleSmall),
-            )
+              child: Text("You can also like", style: Styles.titleSmall),
+            )),
+        SizedBox(
+          height: 20,
         ),
-        SizedBox(height: 20,),
         SimilarBooksList(),
       ],
     );
   }
 }
-
-

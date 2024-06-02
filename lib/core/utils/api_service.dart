@@ -1,7 +1,6 @@
 import 'package:dio/dio.dart';
 
-class ApiService{
-
+class ApiService {
   final Dio _dio;
   final baseUrl = "https://www.googleapis.com/books/v1/";
 
@@ -11,5 +10,4 @@ class ApiService{
     var response = await _dio.get('$baseUrl$endPoint');
     return response.data;
   }
-
 }

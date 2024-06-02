@@ -16,7 +16,7 @@ class BooksUp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routerConfig: AppRouter.router,
       theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor : primaryColor,
+        scaffoldBackgroundColor: primaryColor,
         textTheme: GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
       ),
     );
