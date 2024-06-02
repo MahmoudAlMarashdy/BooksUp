@@ -1,3 +1,10 @@
+import 'dart:convert';
+
+/// type : "ISBN_13"
+/// identifier : "9781284175554"
+
+IndustryIdentifiers industryIdentifiersFromJson(String str) => IndustryIdentifiers.fromJson(json.decode(str));
+String industryIdentifiersToJson(IndustryIdentifiers data) => json.encode(data.toJson());
 class IndustryIdentifiers {
   IndustryIdentifiers({
       this.type, 

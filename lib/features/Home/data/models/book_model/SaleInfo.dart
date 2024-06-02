@@ -1,3 +1,11 @@
+import 'dart:convert';
+
+/// country : "EG"
+/// saleability : "NOT_FOR_SALE"
+/// isEbook : false
+
+SaleInfo saleInfoFromJson(String str) => SaleInfo.fromJson(json.decode(str));
+String saleInfoToJson(SaleInfo data) => json.encode(data.toJson());
 class SaleInfo {
   SaleInfo({
       this.country, 

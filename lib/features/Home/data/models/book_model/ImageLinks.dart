@@ -1,3 +1,10 @@
+import 'dart:convert';
+
+/// smallThumbnail : "http://books.google.com/books/content?id=b-2oDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+/// thumbnail : "http://books.google.com/books/content?id=b-2oDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+
+ImageLinks imageLinksFromJson(String str) => ImageLinks.fromJson(json.decode(str));
+String imageLinksToJson(ImageLinks data) => json.encode(data.toJson());
 class ImageLinks {
   ImageLinks({
       this.smallThumbnail, 

@@ -1,3 +1,10 @@
+import 'dart:convert';
+
+/// containsEpubBubbles : false
+/// containsImageBubbles : false
+
+PanelizationSummary panelizationSummaryFromJson(String str) => PanelizationSummary.fromJson(json.decode(str));
+String panelizationSummaryToJson(PanelizationSummary data) => json.encode(data.toJson());
 class PanelizationSummary {
   PanelizationSummary({
       this.containsEpubBubbles, 

@@ -1,3 +1,9 @@
+import 'dart:convert';
+
+/// isAvailable : false
+
+Epub epubFromJson(String str) => Epub.fromJson(json.decode(str));
+String epubToJson(Epub data) => json.encode(data.toJson());
 class Epub {
   Epub({
       this.isAvailable,});

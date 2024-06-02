@@ -1,3 +1,10 @@
+import 'dart:convert';
+
+/// isAvailable : true
+/// acsTokenLink : "http://books.google.com.eg/books/download/Python_Programming_in_Context-sample-pdf.acsm?id=b-2oDwAAQBAJ&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+
+Pdf pdfFromJson(String str) => Pdf.fromJson(json.decode(str));
+String pdfToJson(Pdf data) => json.encode(data.toJson());
 class Pdf {
   Pdf({
       this.isAvailable, 

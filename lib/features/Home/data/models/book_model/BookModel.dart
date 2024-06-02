@@ -1,9 +1,11 @@
+import 'package:books_up/features/Home/domain/entities/book_entity.dart';
+
 import 'VolumeInfo.dart';
 import 'SaleInfo.dart';
 import 'AccessInfo.dart';
 import 'SearchInfo.dart';
 
-class BookModel {
+class BookModel extends BookEntity{
 
   String? kind;
   String? id;
@@ -22,7 +24,13 @@ class BookModel {
       this.volumeInfo, 
       this.saleInfo, 
       this.accessInfo, 
-      this.searchInfo,});
+      this.searchInfo,}) : super(
+        bookID: id!,
+        bookTitle: volumeInfo!.title!,
+        bookAuthor: volumeInfo.authors?.first ?? '',
+        bookImage: volumeInfo.imageLinks?.thumbnail ?? '',
+        bookPrice: 0.0
+      );
 
   BookModel.fromJson(dynamic json) {
     kind = json['kind'];

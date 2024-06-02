@@ -1,3 +1,10 @@
+import 'dart:convert';
+
+/// text : false
+/// image : true
+
+ReadingModes readingModesFromJson(String str) => ReadingModes.fromJson(json.decode(str));
+String readingModesToJson(ReadingModes data) => json.encode(data.toJson());
 class ReadingModes {
   ReadingModes({
       this.text, 
