@@ -4,6 +4,7 @@ import 'package:books_up/features/Home/data/data_sources/home/home_remote_data_s
 import 'package:books_up/features/Home/domain/entities/book_entity.dart';
 import 'package:books_up/features/Home/domain/repositories/home_repository.dart';
 import 'package:dartz/dartz.dart';
+import 'package:dio/dio.dart';
 
 class HomeRepositoryImpl extends HomeRepository{
 
@@ -24,7 +25,10 @@ class HomeRepositoryImpl extends HomeRepository{
       return right(books);
 // Exception
     } catch (e) {
-      return left(ServerFailure());
+      if(e is DioException){
+        return left(ServerFailure.fromDioException(e));
+      } 
+      return left(ServerFailure(e.toString()));
     }
   }
 
@@ -41,7 +45,10 @@ class HomeRepositoryImpl extends HomeRepository{
       return right(books);
 // Exception
     } catch (e) {
-      return left(ServerFailure());
+      if(e is DioException){
+        return left(ServerFailure.fromDioException(e));
+      } 
+      return left(ServerFailure(e.toString()));
     }
   }
 }
