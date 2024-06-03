@@ -9,7 +9,8 @@ void main() async {
   runApp(const BooksUp());
   await Hive.initFlutter();
   Hive.registerAdapter(BookEntityAdapter());
-  await Hive.openBox(featuredBooksBox);
+  await Hive.openBox<BookEntity>(featuredBooksBox);
+  await Hive.openBox<BookEntity>(newestBooksBox);
 }
 
 class BooksUp extends StatelessWidget {
@@ -18,6 +19,7 @@ class BooksUp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+
       debugShowCheckedModeBanner: false,
       routerConfig: AppRouter.router,
       theme: ThemeData.dark().copyWith(
