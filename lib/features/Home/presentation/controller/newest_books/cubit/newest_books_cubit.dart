@@ -1,6 +1,6 @@
-import 'package:bloc/bloc.dart';
 import 'package:books_up/features/Home/domain/entities/book_entity.dart';
 import 'package:books_up/features/Home/domain/use_cases/newest_books_usecase.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
 
 part 'newest_books_state.dart';
@@ -17,8 +17,8 @@ class NewestBooksCubit extends Cubit<NewestBooksState> {
 
     result.fold(
       (failure) => emit(NewestBooksFailure(failure.failureMessage)),
-      (NewestBooks) => emit(NewestBooksSuccess(NewestBooks))
+      (newestBooks) => emit(NewestBooksSuccess(newestBooks))
     );
-  }
 
+  }
 }
