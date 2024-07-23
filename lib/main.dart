@@ -41,7 +41,7 @@ class BooksUp extends StatelessWidget {
               FeaturedBooksUseCase(
                 locator.get<HomeRepositoryImpl>(),
               ),
-            );
+            )..fetchFeaturedBooks();
           },
         ),
         BlocProvider(
@@ -50,7 +50,7 @@ class BooksUp extends StatelessWidget {
               NewestBooksUseCase(
                 locator.get<HomeRepositoryImpl>(),
               ),
-            );
+            )..fetchNewestBooks();
           },
         ),
       ],

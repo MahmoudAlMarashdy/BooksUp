@@ -8,5 +8,4 @@ class MyBlocObserver extends BlocObserver{
     log(change.toString());
     super.onChange(bloc, change);
   }
-
 }

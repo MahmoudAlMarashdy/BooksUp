@@ -41,6 +41,7 @@ class BooksDetailsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
     var screenWidth = MediaQuery.of(context).size.width;
 
     return Column(

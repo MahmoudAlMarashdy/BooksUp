@@ -1,6 +1,8 @@
 import 'package:books_up/core/utils/styles.dart';
-import 'package:books_up/features/Home/presentation/widgets/newest/newest_listview.dart';
+import 'package:books_up/features/Home/presentation/widgets/featured_book/featured_books_list_bloc_builder.dart';
+import 'package:books_up/features/Home/presentation/widgets/newest/newest_book_list.dart';
 import 'package:books_up/features/Home/presentation/widgets/featured_book/featured_books_list.dart';
+import 'package:books_up/features/Home/presentation/widgets/newest/newest_books_list_bloc_builder.dart';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +22,7 @@ class HomeBody extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               HomeAppBar(),
-              FeaturedBooksList(),
+              FeatureBooksListBlocBuilder(),
               SizedBox(
                 height: 20,
               ),
@@ -38,7 +40,7 @@ class HomeBody extends StatelessWidget {
           ),
         ),
         SliverToBoxAdapter(
-          child: NewestListView(),
+          child: NewestBooksListBlocBuilder(),
         )
       ],
     );
